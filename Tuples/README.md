@@ -2,4 +2,4 @@
 
 ### do follow on Instagram @rochakeducation.coding
 
-<SocialIcon url="https://www.instagram.com/rochakeducation.coding/" />
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
