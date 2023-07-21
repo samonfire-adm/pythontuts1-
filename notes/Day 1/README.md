@@ -6,7 +6,6 @@ This is a Day 1 of learning Python . Here Are some topics that need to be covere
 ## Table of Topics 
 
 - [Introduction](#intro_to_python)
-- [The Art of Technical Writing](#art)
   - [Scope of Python](#scope)
 - [Background Part(IO devices , CPU, Memory ,Computer Organisation and Operating System ) ](#background_part)
 - [Why Do We Need Programming language ](#need_of_programming )
