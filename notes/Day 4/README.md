@@ -69,49 +69,73 @@ else:
 
 ---
 
-## Nested Loops
+# Nested Conditional Statements in Python
 
-In Python, a nested loop is a loop inside another loop. It allows you to iterate over elements in a nested data structure, such as lists of lists or nested dictionaries. The inner loop runs completely for each iteration of the outer loop.
+Conditional statements in Python allow you to control the flow of your program based on certain conditions. Nested conditional statements refer to the concept of having one conditional statement inside another. This allows you to check secondary conditions within the primary condition. Nested conditionals are useful when you need to add more granularity to your program's logic.
+
+## Syntax of Nested Conditional Statements
+
+The syntax of a nested conditional statement in Python looks like this:
 
 ```python
-for outer_item in outer_list:
-    for inner_item in inner_list:
-        # Code block to execute for each combination of outer_item and inner_item
+if condition1:
+    # Code block executed if condition1 is True
+    if condition2:
+        # Code block executed if both condition1 and condition2 are True
+    else:
+        # Code block executed if condition1 is True and condition2 is False
+else:
+    # Code block executed if condition1 is False
 ```
 
-Nested loops are commonly used for tasks that require examining elements in multiple dimensions, like 2D grids or matrices.
+## Example of Nested Conditional Statements
 
-## Examples of Nested Loops
+Let's see some examples of nested conditional statements in Python:
 
-Example 1: Printing Multiplication Table
+### Example 1: Checking Grades
+
 ```python
-for i in range(1, 11):
-    for j in range(1, 11):
-        result = i * j
-        print(f"{i} * {j} = {result}")
-    print()  # Add a blank line after each row
+# Input the student's score
+score = int(input("Enter the student's score: "))
+
+if score >= 90:
+    grade = 'A'
+elif score >= 80:
+    grade = 'B'
+else:
+    # If the score is less than 80, check if it's a passing grade
+    if score >= 60:
+        grade = 'C'
+    else:
+        grade = 'F'
+
+print(f"The student's grade is: {grade}")
 ```
 
-Example 2: Finding Pairs with Given Sum
+In this example, we have a nested if-else statement inside the else block of the outer if-else statement. It checks if the score is less than 80 and assigns the appropriate grade accordingly.
+
+### Example 2: Checking Leap Year
+
 ```python
-numbers = [2, 4, 6, 8, 10]
-target_sum = 12
+# Input the year
+year = int(input("Enter a year: "))
 
-for i in range(len(numbers)):
-    for j in range(i + 1, len(numbers)):
-        if numbers[i] + numbers[j] == target_sum:
-            print(f"Pair found: ({numbers[i]}, {numbers[j]})")
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print(f"{year} is a leap year.")
+        else:
+            print(f"{year} is not a leap year.")
+    else:
+        print(f"{year} is a leap year.")
+else:
+    print(f"{year} is not a leap year.")
 ```
 
-Example 3: Drawing a Triangle Pattern
-```python
-size = 5
+In this example, we have multiple nested if statements to determine whether a year is a leap year or not. The program checks if the year is divisible by 4, then further checks if it's divisible by 100 and 400 to determine the leap year condition.
 
-for i in range(size):
-    for j in range(i + 1):
-        print("*", end=" ")
-    print()
-```
+These are just a few examples of how nested conditional statements can be used in Python to handle complex decision-making scenarios. Remember to properly indent your code to maintain the hierarchy of the nested statements.
+
 
 ---
 
