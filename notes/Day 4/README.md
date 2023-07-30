@@ -137,6 +137,7 @@ In this example, we have multiple nested if statements to determine whether a ye
 These are just a few examples of how nested conditional statements can be used in Python to handle complex decision-making scenarios. Remember to properly indent your code to maintain the hierarchy of the nested statements.
 
 
+
 ---
 
 
